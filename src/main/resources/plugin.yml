@@ -1,0 +1,75 @@
+name: CdrGates
+version: '1.0.0'
+main: id.menkiplugcore.cdrgates.CdrGatesPlugin
+api-version: '1.21'
+author: MenkiPlugcore
+description: Lightweight animated gate system with click triggers, sensors, and secure keys.
+
+commands:
+  gate:
+    usage: /gate [nama]
+    permission: gate.add
+  togglegate:
+    aliases: [gatetoggle]
+    usage: /togglegate <gate>
+    permission: gate.toggle.command
+  deletegate:
+    aliases: [removegate, delgate, gateremove, gatedel, gatedelete]
+    usage: /deletegate <gate>
+    permission: gate.remove
+  gatetype:
+    aliases: [typegate]
+    usage: /gatetype <gate> <block>
+    permission: gate.type
+  gates:
+    aliases: [gatelist, listgates, listgate]
+    permission: gate.list
+  gateviewall:
+    aliases: [viewallgates, viewallgate, allgateview, viewgateall]
+    permission: gate.list
+  gateaccess:
+    usage: /gateaccess <gate> <none|item|key> [item]
+    permission: gate.access.admin
+  gatekey:
+    usage: /gatekey <give|master|revoke> ...
+    permission: gate.key.admin
+  gateaccessinfo:
+    usage: /gateaccessinfo <gate>
+    permission: gate.access.admin
+  clickgate:
+    aliases: [gateclick]
+    usage: /clickgate <right|left|both> <gate>
+    permission: gate.toggle.click.set
+  clickremover:
+    usage: /clickremover [gate]
+    permission: gate.click.removal
+  gateauto:
+    aliases: [gateautomation, autogate]
+    usage: /gateauto <gate> <radius>
+    permission: gate.automation
+  gatesauto:
+    aliases: [autogates]
+    permission: gate.automation.list
+  delgateauto:
+    aliases: [delautogate]
+    usage: /delgateauto [gate]
+    permission: gate.automation.deletion
+  gatehelp:
+    aliases: [helpgate, helpgates, gateshelp]
+
+permissions:
+  gate.add: {default: op}
+  gate.toggle.command: {default: op}
+  gate.remove: {default: op}
+  gate.type: {default: op}
+  gate.list: {default: op}
+  gate.access.admin: {default: op}
+  gate.key.admin: {default: op}
+  gate.toggle.click.set: {default: op}
+  gate.click.removal: {default: op}
+  gate.toggle.click.right: {default: op}
+  gate.toggle.click.left: {default: op}
+  gate.toggle.click.both: {default: op}
+  gate.automation: {default: op}
+  gate.automation.list: {default: op}
+  gate.automation.deletion: {default: op}

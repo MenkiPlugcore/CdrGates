@@ -1,0 +1,8 @@
+prefix: '&8[&6CdrGates&8] &r'
+max-gate-size: 1000
+gate-animation-ticks: 14
+editor-tool: BEDROCK
+default-block: OAK_FENCE
+auto-scan-ticks: 10
+key-material: TRIPWIRE_HOOK
+master-key-material: NETHER_STAR
